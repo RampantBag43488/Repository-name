@@ -25,5 +25,5 @@ vjp.append(input("\n\nPor ultimo, pero no menos importante dime que tematica pri
  prefieres.\n(supervivencia, guerra, carros, aviones, espacio, heroes, zombies, medieval,\
  rutas multiples, granjas, robots, piratas, peleas, playground, escape, daungeons, \
 football, basquet, golf, ciclismo, souls like, lego,)"))
-print(vjp)
+
 
