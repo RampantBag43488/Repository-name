@@ -60,7 +60,7 @@ def num_valores_comun(lista1, lista2):
 #el usuario y te da el resultado.
 if num_valores_comun(vjp, minecraft) > num_valores_comun(vjp, cod_warzone):
     print("Tu videojuego es minecraft")
-elif num_valores_comun(vjp, minecraft) < num_valores_comun(vjp, cod_warzone)
+elif num_valores_comun(vjp, minecraft) < num_valores_comun(vjp, cod_warzone):
     print("Tu videojuego es cod warzone")
 else:
     print("Tanto minecraft como cod warzone son posibles proximos juegos para ti")
