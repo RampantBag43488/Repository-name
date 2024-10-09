@@ -2,14 +2,15 @@
 #caracteristicas deseadas en el juego por el usuario.
 vdp=[]
 
-#luego se crea una lista de cada juego en la que se guardan las caracteristicas que
-#corresponden al juego de la lista.
-minecraft=['P', 'xbox', 'pc', 'play', 'coop', 'aventura', 'low-poly', 'pixelado', \
-'supervivencia', 'microsoft studios', 'game pass']
-minecraft_dungeons=['P', 'xbox', 'pc', 'play', 'coop', 'aventura', 'pixelado', \
-'dungeons', 'microsoft studios', 'game pass']
-cod_warzone=['G', 'xbox', 'pc', 'play','multi', 'accion', 'realista', 'activision', \
-'ninguno', 'guerra', 'battle royal']
+#luego se crea un diccionario de listas de cada juego en la que se guardan las caracteristicas que
+#corresponden al juego en la llave.
+videogames_dictionary = {"minecraft" : ['P', 'xbox', 'pc', 'play', 'coop', 'aventura', 'low-poly', 'pixelado', \
+'supervivencia', 'game pass'], "minecraft_dungeons" : ['P', 'xbox', 'pc', 'play', 'coop', 'aventura', 'pixelado', \
+'dungeons', 'game pass'], "cod_warzone" : ['G', 'xbox', 'pc', 'play','multi', 'accion', 'realista', 'ninguno', \
+'guerra', 'battle royal']}
+
+
+
 
 
 #se da una introduccion al usuario para que sepa que hacer y para que sob las preguntas
@@ -43,8 +44,6 @@ de un juego, ¿Cual te gusta mas?\n(pixelado, realista, retro, \
 surrealista, dibujo a mano, multimedia, dibujo animado, noir o \
 low-poly)\n"))
 
-    vjp.append(input("\n\n¿Que publicadores de videojuegos te llama mas la atencion?\n\
-(xbox games studios, blizard, microsoft studios, SEGA, CAPCOM, bandai namco, activision)\n"))
 
     vjp.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, play plus \
 o ninguno?\n"))
@@ -63,18 +62,41 @@ football, basquet, golf, ciclismo, souls like, lego, battle royal, mundo abierto
 def num_valores_comun(lista1, lista2):
     return len(set(lista1) & set(lista2))
 
-
+def valores_comparacion():
+    vp=lista_usu()
+    compa_dictionary = {}
+    for i in videogames_dictionary:
+        compa_dictionary.update({i : num_valores_comun(vp,videogames_dictionary[i])})
+    return compa_dictionary
 
 #se compara que videojuego tiene mas coincidencias en caracteristicas con las pedidas por
 #el usuario y te da el resultado.
-def comparar(a,b):
-    vdp=lista_usu()
-    if num_valores_comun(vdp, a) > num_valores_comun(vdp, b):
-        return "Tu videojuego es minecraft"
-    elif num_valores_comun(vdp, a) < num_valores_comun(vdp, b):
-        return "Tu videojuego es cod warzone"
+def comparar_resultados(a):
+    c_dicc = a
+    list_res = []
+    temp = "minecraft"
+    for x in c_dicc:
+        if c_dicc[x] >= c_dicc[temp]:
+            v_definitivo = x
+            print(v_definitivo)
+        elif c_dicc[temp] < c_dicc[x]:
+            v_definitivo = temp
+            print(v_definitivo)
+        temp = x
+
+    list_res.append(v_definitivo)
+    for i in c_dicc:
+        if c_dicc[v_definitivo] == c_dicc[i] and i != v_definitivo:
+            list_res.append(i)
+    
+    return list_res
+
+
+def respuesta(lista):
+    if len(lista) == 1:
+        return "El videojuego perfecto para ti es: ", lista
     else:
-        return "Tanto minecraft como cod warzone son posibles proximos juegos para ti"
+        return "Los videojuegos perfectos para ti son: ", lista
 
 #funcion para volver a preguntar caracteristicas al usuario y hacer la comparacion si el
 #usuario quiere repetir
@@ -86,11 +108,11 @@ otro juego y 0 si no "))
         answer=int(input("pon un 1 si quieres poner distintas caracteristicas y obtener \
 otro juego y 0 si no "))
     if answer==1:
-        print(comparar(minecraft,cod_warzone))
+        print(respuesta(comparar_resultados(valores_comparacion())))
         return repetir()
     else:
         return "ten un buen dia usuario!"
 
 
-print(comparar(minecraft,cod_warzone))
+print(respuesta(comparar_resultados(valores_comparacion())))
 print(repetir())
