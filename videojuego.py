@@ -62,6 +62,8 @@ football, basquet, golf, ciclismo, souls like, lego, battle royal, mundo abierto
 def num_valores_comun(lista1, lista2):
     return len(set(lista1) & set(lista2))
 
+#Se guardan en un diccionario como llaves los nombres de los juegos y como valores la cantidad
+#de coincidencias que hay con la lista de caracteristicas del usuario
 def valores_comparacion():
     vp=lista_usu()
     compa_dictionary = {}
@@ -91,7 +93,8 @@ def comparar_resultados(a):
     
     return list_res
 
-
+#Funcion para definir que respuesta sele dara al usuario en base de si es uno o 
+#más la cantidad de juegos que se le recomendaran
 def respuesta(lista):
     if len(lista) == 1:
         return "El videojuego perfecto para ti es: ", lista
@@ -113,6 +116,10 @@ otro juego y 0 si no "))
     else:
         return "ten un buen dia usuario!"
 
-
+#Se imprime al usuario el codigo para recopilar su lista de caracteristicas preferidas y 
+#cual es el juego o juegos que más concuerdan
 print(respuesta(comparar_resultados(valores_comparacion())))
+
+#Se imprime la funcion de repetir que le da la opcion al usuario de volver a dar caracteriticas
+#y obtener un juego distinto como resultado si las respuestas son distintas
 print(repetir())
