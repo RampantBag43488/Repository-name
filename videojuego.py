@@ -12,10 +12,10 @@ preferencias.
 """
 =================Diccionario de videojuegos con caracteristicas=================
 """
-videogames_dictionary = {"minecraft" : ['P', 'xbox', 'pc', 'play', 'coop', 
+videogames_dictionary = {"minecraft" : ['p', 'xbox', 'pc', 'play', 'coop', 
 'aventura', 'low-poly', 'pixelado', 'supervivencia', 'game pass'], 
-"minecraft_dungeons" : ['P', 'xbox', 'pc', 'play', 'coop', 'aventura', 
-'pixelado', 'dungeons', 'game pass'], "cod_warzone" : ['G', 'xbox', 'pc', 
+"minecraft_dungeons" : ['p', 'xbox', 'pc', 'play', 'coop', 'aventura', 
+'pixelado', 'dungeons', 'game pass'], "cod_warzone" : ['g', 'xbox', 'pc', 
 'play','multi', 'accion', 'realista', 'ninguno', 'guerra', 'battle royal']}
 
 
@@ -23,6 +23,9 @@ print("Hola usuario, espero te encuentres bien. \nA continuacion se te pediran \
 ciertas caracteristicas a tu gusto que definiran el videojuego mas apropiado \
 para ti en tu proximo juego")
 
+print("Tenga en cuenta que si la respuesta dada no es una de las indicadas \
+entre parentesis en cada pregunta esta no contara, ya que no coincidira con\
+las registradas en la base de datos.")
 """
 ==============================Funcion de preguntas==============================
 """
@@ -34,35 +37,36 @@ def lista_usu():
     base a siete preguntas.
     Devuelve: la lista con las caracteristicas que el usuario decide.
     """
-    vjp=[]
-    vjp.append(input("\nPrimero.\n\n¿Prefieres un juego gratuito o de paga? \
-(pon G o P)\n"))
+    video_juego=[]
+    video_juego.append((input("\nPrimero.\n\n¿Prefieres un juego gratuito o de paga? \
+(pon G o P)\n")).lower())
+    print(video_juego)
 
-    vjp.append(input("\n\nAhora bien dime, ¿Que plataforma de juego prefieres? \
-(xbox, pc o play)\n"))
+    video_juego.append(input("\n\nAhora bien dime, ¿Que plataforma de juego prefieres? \
+(xbox, pc o play)\n").lower())
 
-    vjp.append(input("\n\nEmpezamos con lo mas importante, ¿Prefieres jugar en \
-solitario, un cooperativo o un multijugador? (solo, coop, multi)\n"))
+    video_juego.append(input("\n\nEmpezamos con lo mas importante, ¿Prefieres jugar en \
+solitario, un cooperativo o un multijugador? (solo, coop, multi)\n").lower())
 
-    vjp.append(input("\n\n¿Y que hay del genero que te interesa mas?\n\
+    video_juego.append(input("\n\n¿Y que hay del genero que te interesa mas?\n\
 (Los generos son: plataformas, puzles, simulacion, RPG, accion, aventura, \
-estrategia, deportes, terror, cifi, fantasia y carreras)\n"))
+estrategia, deportes, terror, cifi, fantasia y carreras)\n").lower())
 
-    vjp.append(input("\n\nTambien es importante la apariencia o estilo\
+    video_juego.append(input("\n\nTambien es importante la apariencia o estilo\
 de un juego, ¿Cual te gusta mas?\n(pixelado, realista, retro, \
 surrealista, dibujo a mano, multimedia, dibujo animado, noir o \
-low-poly)\n"))
+low-poly)\n").lower())
 
 
-    vjp.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, \
-play plus o ninguno?\n"))
+    video_juego.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, \
+play plus o ninguno?(game pass, play plus, ninguno\n").lower())
                     
-    vjp.append(input("\n\nPor ultimo, pero no menos importante dime que \
+    video_juego.append(input("\n\nPor ultimo, pero no menos importante dime que \
 tematica principal prefieres.\n(supervivencia, guerra, carros, aviones, \
 espacio, superheroes, zombies, medieval, rutas multiples, granjas, \
 robots, piratas, peleas, playground, escape, dungeons, football, basquet, \
-golf, ciclismo, souls like, lego, battle royal, mundo abierto)\n"))
-    return vjp
+golf, ciclismo, souls like, lego, battle royal, mundo abierto)\n").lower())
+    return video_juego
 
 """
 =======================Funciones principales del programa=======================
