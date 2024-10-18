@@ -12,11 +12,39 @@ preferencias.
 """
 =================Diccionario de videojuegos con caracteristicas=================
 """
-videogames_dictionary = {"minecraft" : ['p', 'xbox', 'pc', 'play', 'coop', 
+videogames_dictionary = {"Minecraft" : ['p', 'xbox', 'pc', 'play', 'coop', 
 'aventura', 'low-poly', 'pixelado', 'supervivencia', 'game pass'], 
-"minecraft_dungeons" : ['p', 'xbox', 'pc', 'play', 'coop', 'aventura', 
-'pixelado', 'dungeons', 'game pass'], "cod_warzone" : ['g', 'xbox', 'pc', 
-'play','multi', 'accion', 'realista', 'ninguno', 'guerra', 'battle royal']}
+"Minecraft Dungeons" : ['p', 'xbox', 'pc', 'play', 'coop', 'aventura', 
+'pixelado', 'dungeons', 'game pass'], "Cod Warzone" : ['g', 'xbox', 'pc', 
+'play','multi', 'accion', 'realista', 'ninguno', 'guerra', 'battle royal'],
+"Hollow Knight" : ['p', 'xbox', 'pc', 'play', 'solo', 
+'plataformas', 'low-poly', 'dibujo a mano', 'souls like', 'game pass'], 
+"Fortnite" : ['g', 'xbox', 'pc', 'play','multi', 'accion', 'caricaturesco', 
+'ninguno', 'guerra', 'battle royal'], "Moonlighter" : ['p', 'xbox', 'pc', 
+'play', 'solo', 'accion', 'rpg', 'pixelado', 'dungeons', 'game pass'], 
+"Human Fall Flat" : ['p', 'xbox', 'pc', 'play', 'coop', 'plataformas', 
+'low-poly', 'puzzles', 'supervivencia', 'game pass'], "Gang Beasts" : ['p', 
+'xbox', 'pc', 'play', 'multi', 'plataformas', 'low-poly', 'accion', 
+'peleas', 'game pass'], "Detroit Become Human" : ['p', 'play', 'pc', 'accion', 
+'solo', 'realista', 'cifi', 'rutas multiples', 'play plus', 'robots'], 
+"The Last Of Us" : ['p', 'play', 'pc', 'accion', 'solo', 'realista', 'terror', 
+'zombies', 'play plus'], "The Witcher 3" : ['p', 'play', 'pc', 'rpg', 'solo', 
+'realista', 'medieval', 'mundo abierto', 'play plus'], "Ghost of Tsushima" : 
+['p', 'play', 'pc', 'rpg', 'solo', 'realista', 'souls like', 'mundo abierto', 
+'play plus'], "Uncharted" : ['p', 'play', 'pc', 'accion', 'solo', 'realista', 
+'tesoros', 'aventura', 'play plus'], "Spiderman" : ['p', 'play', 'pc', 'accion',
+'solo', 'realista', 'superheroes', 'aventura', 'play plus', 'mundo abierto'],
+"COD Black Ops saga" : ['p', 'play', 'pc', 'xbox','solo', 'realista', 
+'coop', 'accion', 'game pass', 'zombies', 'terror', 'guerra', 'supervivencia'],
+"Halo" : ['p', 'espacio', 'pc', 'xbox','solo', 'realista', 'coop', 'accion', 
+'game pass', 'cifi', 'guerra'], "Forza" : ['p', 'carros', 'pc', 'xbox','solo', 
+'realista', 'accion', 'game pass', 'carreras'], "GTA V" : ['p', 'play', 'pc',
+'xbox','solo', 'multi', 'accion', 'realista', 'ninguno', 'mundo abierto',
+'rutas multiples'], "Roblox" : ['g', 'play', 'pc','xbox','solo', 'coop', 
+'accion', 'plataformas', 'ninguno', 'playgorund'], "For Honor" : ['p', 'play', 
+'pc','xbox','solo', 'multi', 'accion', 'realista', 'ninguno', 'guerra',
+'medieval'], "Sea of Thieves" : ['p', 'piratas', 'pc', 'xbox', 'solo', 'multi', 
+'accion', 'caricaturesco', 'game pass', 'mundo abierto', 'tesoros']}
 
 
 print("Hola usuario, espero te encuentres bien. \nA continuacion se te pediran \
@@ -37,36 +65,35 @@ def lista_usu():
     base a siete preguntas.
     Devuelve: la lista con las caracteristicas que el usuario decide.
     """
-    video_juego=[]
-    video_juego.append((input("\nPrimero.\n\n¿Prefieres un juego gratuito o de paga? \
+    video_juego_usu=[]
+    video_juego_usu.append((input("\nPrimero.\n\n¿Prefieres un juego gratuito o de paga? \
 (pon G o P)\n")).lower())
-    print(video_juego)
 
-    video_juego.append(input("\n\nAhora bien dime, ¿Que plataforma de juego prefieres? \
+    video_juego_usu.append(input("\n\nAhora bien dime, ¿Que plataforma de juego prefieres? \
 (xbox, pc o play)\n").lower())
 
-    video_juego.append(input("\n\nEmpezamos con lo mas importante, ¿Prefieres jugar en \
+    video_juego_usu.append(input("\n\nEmpezamos con lo mas importante, ¿Prefieres jugar en \
 solitario, un cooperativo o un multijugador? (solo, coop, multi)\n").lower())
 
-    video_juego.append(input("\n\n¿Y que hay del genero que te interesa mas?\n\
-(Los generos son: plataformas, puzles, simulacion, RPG, accion, aventura, \
+    video_juego_usu.append(input("\n\n¿Y que hay del genero que te interesa mas?\n\
+(Los generos son: plataformas, puzzles, simulacion, RPG, accion, aventura, \
 estrategia, deportes, terror, cifi, fantasia y carreras)\n").lower())
 
-    video_juego.append(input("\n\nTambien es importante la apariencia o estilo\
+    video_juego_usu.append(input("\n\nTambien es importante la apariencia o estilo\
 de un juego, ¿Cual te gusta mas?\n(pixelado, realista, retro, \
-surrealista, dibujo a mano, multimedia, dibujo animado, noir o \
+surrealista, dibujo a mano, multimedia, dibujo animado, caricaturesco, noir o \
 low-poly)\n").lower())
 
 
-    video_juego.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, \
+    video_juego_usu.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, \
 play plus o ninguno?(game pass, play plus, ninguno\n").lower())
                     
-    video_juego.append(input("\n\nPor ultimo, pero no menos importante dime que \
+    video_juego_usu.append(input("\n\nPor ultimo, pero no menos importante dime que \
 tematica principal prefieres.\n(supervivencia, guerra, carros, aviones, \
 espacio, superheroes, zombies, medieval, rutas multiples, granjas, \
-robots, piratas, peleas, playground, escape, dungeons, football, basquet, \
-golf, ciclismo, souls like, lego, battle royal, mundo abierto)\n").lower())
-    return video_juego
+robots, piratas, peleas, playground, escape, dungeons, souls like, battle royal, \
+mundo abierto, tesoros)\n").lower())
+    return video_juego_usu
 
 """
 =======================Funciones principales del programa=======================
@@ -96,14 +123,14 @@ def valores_comparacion():
     la cantidad de coincidencias de caracteristicas de ese juego con la lista 
     hecha por el usuario.
     """
-    vp=lista_usu()
-    compa_dictionary = {}
+    juego_perfecto=lista_usu()
+    comparation_dic = {}
     for i in videogames_dictionary:
-        compa_dictionary.update({i : num_valores_comun(vp,videogames_dictionary[i])})
-    return compa_dictionary
+        comparation_dic.update({i : num_valores_comun(juego_perfecto,videogames_dictionary[i])})
+    return comparation_dic
 
 
-def comparar_resultados(a):
+def comparar_resultados(dicc_comparation):
     """
     (uso de funciones, ciclos, ciclos anidados, diccionarios, lista, 
     condicionales)
@@ -115,7 +142,7 @@ def comparar_resultados(a):
     Devuelve: Una lista con el o los nombres de los juegos con mayor cantidad
     de coincidencias que la lista creada por el usuario.
     """
-    c_dicc = a
+    c_dicc = dicc_comparation
     list_res = []
     temp = "minecraft"
     for x in c_dicc:
@@ -156,13 +183,13 @@ def repetir():
     caracteristicas en caso de responde si y en caso de responder no, se le 
     desea un buen dia al usuario y acaba el programa.
     """
-    answer=int(input("pon un 1 si quieres poner distintas caracteristicas y obtener \
-otro juego y 0 si no "))
+    answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
+otro juego como resultado? \n"))).lower()
 
-    while answer>1:
-        answer=int(input("pon un 1 si quieres poner distintas caracteristicas y obtener \
-otro juego y 0 si no "))
-    if answer==1:
+    while not(answer == "si" or answer == "no"):
+        answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
+otro juego como resultado? \n"))).lower()
+    if answer=="si":
         print(respuesta(comparar_resultados(valores_comparacion())))
         return repetir()
     else:
