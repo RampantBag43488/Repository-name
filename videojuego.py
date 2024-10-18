@@ -86,7 +86,7 @@ low-poly)\n").lower())
 
 
     video_juego_usu.append(input("\n\n¿Quieres que el juego se encuentre en el game pass, \
-play plus o ninguno?(game pass, play plus, ninguno\n").lower())
+play plus o ninguno?(game pass, play plus, ninguno)\n").lower())
                     
     video_juego_usu.append(input("\n\nPor ultimo, pero no menos importante dime que \
 tematica principal prefieres.\n(supervivencia, guerra, carros, aviones, \
@@ -144,7 +144,7 @@ def comparar_resultados(dicc_comparation):
     """
     c_dicc = dicc_comparation
     list_res = []
-    temp = "minecraft"
+    temp = "Minecraft"
     for x in c_dicc:
         if c_dicc[x] >= c_dicc[temp]:
             v_definitivo = x
@@ -184,11 +184,11 @@ def repetir():
     desea un buen dia al usuario y acaba el programa.
     """
     answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
-otro juego como resultado? \n"))).lower()
+otro juego como resultado? \n(si, no)"))).lower()
 
     while not(answer == "si" or answer == "no"):
         answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
-otro juego como resultado? \n"))).lower()
+otro juego como resultado? \n(si, no)"))).lower()
     if answer=="si":
         print(respuesta(comparar_resultados(valores_comparacion())))
         return repetir()
