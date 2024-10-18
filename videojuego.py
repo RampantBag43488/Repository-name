@@ -184,11 +184,11 @@ def repetir():
     desea un buen dia al usuario y acaba el programa.
     """
     answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
-otro juego como resultado? \n(si, no)"))).lower()
+otro juego como resultado? \n(si, no)\n"))).lower()
 
     while not(answer == "si" or answer == "no"):
         answer=str((input("¿Quieres poner distintas caracteristicas y obtener \
-otro juego como resultado? \n(si, no)"))).lower()
+otro juego como resultado? \n(si, no)\n"))).lower()
     if answer=="si":
         print(respuesta(comparar_resultados(valores_comparacion())))
         return repetir()
