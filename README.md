@@ -29,3 +29,11 @@ Cambio realizado: Cambie y arregle los comentarios para cumplir con los estandar
     """
 
 Líneas de código donde se ve la corrección: Todo el codigo, de 1 a 167
+
+###Incorpora y aplica nuevas funciones en su programa e incluye su referencias al API de Python.
+Las funciones que agregue a mi proyecto no vistas en clase fueron los diccionarios y la función set para las listas.
+Los diccionarios los utilice para facilitar el guardado y llamado de cada videojuego y sus características, poniendo como llave el nombre del juego y como valor las características del juego. De igual manera más adelante los utilice para crear un segundo diccionario en el que tenga como llave el nombre del juego y como valor la cantidad de valores iguales a la lista hecha por el usuario, para así comparar la cantidad de valores iguales entre cada videojuego y poder dar en el resultado el nombre del juego o juegos que contengan más valores iguales. Aquí los diccionarios facilitan el poder poner el nombre del juego a la hora de dar el resultado al usuario en base a su valor, en este caso el que sea mayor.
+Aprendi diccionarios de la pagina w3schools (https://www.w3schools.com/python/python_dictionaries.asp) y de un video de youtube (https://www.youtube.com/watch?v=v25-m1LOUiU).
+
+La función set la use para convertir las listas de características del usuario y de un juego a un conjunto en el que no se repitan valores y así poder obtener un conjunto de los valores repetidos en ambas listas con la función && y luego sacar la cantidad de valores iguales con la función len.
+Aprendí cómo funciona la función set mediante un video de youtube (https://www.youtube.com/watch?v=Mzfar-fxfHY).
